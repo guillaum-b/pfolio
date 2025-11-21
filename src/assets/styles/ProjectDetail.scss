@@ -1,0 +1,27 @@
+.project-detail-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: #333;
+}
+
+.project-detail-image {
+    width: 100%;
+    margin: 1rem 0;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.project-section h2 {
+    color: #ff7f50;
+    margin-bottom: 0.5rem;
+}
+
+.project-section p, .project-section ul {
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.project-section ul li {
+    margin-bottom: 0.4rem;
+}

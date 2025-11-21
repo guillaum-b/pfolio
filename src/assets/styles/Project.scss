@@ -1,0 +1,132 @@
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    padding: 5% 10%;
+    text-align: left;
+}
+  
+.projects-container .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+}
+  
+.projects-container .projects-grid .project {
+    text-align: left;
+}
+  
+.project h2:hover {
+    // text-decoration: underline;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+  
+.zoom {
+    border-radius: 5px;
+    transition: transform .2s;
+    margin: 0 auto;
+}
+  
+.zoom:hover {
+    transform: scale(1.05);
+}
+
+@media screen {
+    @media (max-width: 700px) {
+        .projects-container {
+            display: block;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+  
+        .projects-container .projects-grid {
+            display: block;
+        }
+      
+        .projects-container .projects-grid .project {
+            padding-bottom: 5%;
+        }
+    }
+}
+
+.subtitle {
+    font-size: 1rem;  
+    font-style: italic; 
+    }
+    
+.see-more-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  font-family: "Lato", sans-serif;
+  color: white;                 // texte blanc
+  background-color: #5000ca;   // violet style Yuki Sato
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.see-more-btn:hover {
+  background-color: #3b00a0;   // foncé au hover
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.see-more-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(80,0,202,0.4);
+}
+
+.skills-chips {
+    margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px; 
+}
+
+.chip {
+    padding: 4px 14px; 
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    font-size: 1rem;
+    font-family: "Lato", sans-serif;
+    color: inherit;
+    font-weight: 550;
+    transition: background-color 0.2s, transform 0.15s;
+    cursor: default;
+}
+
+.chip:hover {
+    background-color: rgba(255, 255, 255, 0.22);
+    transform: scale(1.05);
+}
+
+.video-responsive {
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* Pour éviter que la vidéo dépasse le conteneur */
+    display: block;   /* Supprime l’espace en ligne sous la vidéo */
+}
+
+p.video_legend {
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.project-image {
+    width: 100%;        /* full width of the grid column */
+    height: 320px;      /* same fixed height for all images */
+    object-fit: cover;  /* crops image to fill the space without distortion */
+    display: block;     /* removes small inline spacing under image */
+    border-radius: 8px; /* optional: rounded corners */
+}
+
+.project-image_p {
+    width: 100%;        /* full width of the grid column */
+    height: 320px;      /* same fixed height for all images */
+    object-fit: contain;  /* crops image to fill the space without distortion */
+    display: block;     /* removes small inline spacing under image */
+    border-radius: 8px; /* optional: rounded corners */
+}
