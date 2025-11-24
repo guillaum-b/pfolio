@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/pfolio/static/css/main.1cc2b785.css",
+    "main.js": "/pfolio/static/js/main.489a3e09.js",
+    "static/js/453.b05d8aa5.chunk.js": "/pfolio/static/js/453.b05d8aa5.chunk.js",
+    "static/media/mock_foot.jpg": "/pfolio/static/media/mock_foot.e95672b6653c5cf248c7.jpg",
+    "static/media/mock_potential.jpg": "/pfolio/static/media/mock_potential.d93a7f86eef257127f98.jpg",
+    "static/media/mock_plane.jpg": "/pfolio/static/media/mock_plane.a392281df879fc01c5d6.jpg",
+    "static/media/mock_tennis.jpg": "/pfolio/static/media/mock_tennis.9e16e09491d7064fb7e5.jpg",
+    "static/media/mock_pcm.jpg": "/pfolio/static/media/mock_pcm.b007a26e864d71afe51e.jpg",
+    "static/media/mock_pets.jpg": "/pfolio/static/media/mock_pets.10ae7547a73b594fb147.jpg",
+    "static/media/mock_tt.jpg": "/pfolio/static/media/mock_tt.3c36bb54edceeadd00d7.jpg",
+    "static/media/bg-light.png": "/pfolio/static/media/bg-light.bac0efb485244a522981.png",
+    "static/media/bg-dark.png": "/pfolio/static/media/bg-dark.f420c6b8458af72de935.png",
+    "static/media/mock_basket.jpg": "/pfolio/static/media/mock_basket.422243d647fbd5936a7f.jpg",
+    "static/media/mock_leb.jpg": "/pfolio/static/media/mock_leb.e402f9453e58c5a769a8.jpg",
+    "static/media/mock_dash.png": "/pfolio/static/media/mock_dash.48825f525cc42647c241.png",
+    "static/media/mock_cc.png": "/pfolio/static/media/mock_cc.fd089311297a80110acf.png",
+    "index.html": "/pfolio/index.html",
+    "main.1cc2b785.css.map": "/pfolio/static/css/main.1cc2b785.css.map",
+    "main.489a3e09.js.map": "/pfolio/static/js/main.489a3e09.js.map",
+    "453.b05d8aa5.chunk.js.map": "/pfolio/static/js/453.b05d8aa5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1cc2b785.css",
+    "static/js/main.489a3e09.js"
+  ]
+}
