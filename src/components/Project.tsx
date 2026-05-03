@@ -39,7 +39,7 @@ function Project() {
             {/* Projet Power Split */}
             <div className="project">
                 <img src={mock_tt} className="project-image zoom" alt="thumbnail" />
-                <h2>Power Split Algorithm for Individual Time Trials in Road Cycling</h2>
+                <h2>Power Split Algorithm for Individual Time Trials in Road Cycling.</h2>
                 <p className="subtitle">
                     <em>Internship completed at the end of the third year of engineering school in Applied Mathematics, supervised by Mr.Fondin, Lead Data Scientist at Team Visma Lease a Bike</em>
                 </p>
