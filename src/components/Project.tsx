@@ -11,6 +11,7 @@ import mock_football from '../assets/images/mock_foot.jpg';
 import mock_tt_video from '../assets/images/tt_video.mp4';
 import mock_dash from '../assets/images/mock_dash.png';
 import mock_pcm from '../assets/images/mock_pcm.jpg';
+import mock_kif from '../assets/images/mock_kif.jpg';
 import '../assets/styles/Project.scss';
 
 function Project() {
@@ -36,10 +37,47 @@ function Project() {
     <div className="projects-container" id="internships">
         <h1>Internships</h1>
         <div className="projects-grid">
+            {/* Kolding IF */}
+            <div className="project">
+                <img src={mock_kif} className="project-image zoom" alt="thumbnail" />
+                    <h2>Forecasting player potential development using advanced football data</h2>
+                    <p className="subtitle">
+                        <em>Internship completed at the professional football club Kolding IF (Denmark) during the final year of a Bachelor's degree in Data Science</em>
+                    </p>
+                    <p>
+                        Two projects were addressed during the internship: predicting a player's level in future seasons and modeling changes in players' levels when they transfer from one league to another. The data used came from <i>IMPECT</i> and <i>Wyscout</i>
+                    </p>
+                    <div className="skills-chips">
+                        <span className="chip">Machine Learning</span>
+                        <span className="chip">Python Programming</span>
+                        <span className="chip">IMPECT</span>
+                        <span className="chip">Wyscout</span>
+                        <span className="chip">Opta</span>
+                    </div>
+
+                    <button 
+                        className="see-more-btn" 
+                        onClick={() => toggleShowMore("tableTennis")}
+                    >
+                        {showMoreStates.tableTennis ? 'See less' : 'See more'}
+                    </button>
+
+                    {showMoreStates.tableTennis && (
+                        <>
+                            <p>Main tasks included:</p>
+                            <ul>
+                                <li>Collect data using APIs</li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </>
+                )}
+            </div>
+
             {/* Projet Power Split */}
             <div className="project">
                 <img src={mock_tt} className="project-image zoom" alt="thumbnail" />
-                <h2>Power Split Algorithm for Individual Time Trials in Road Cycling.</h2>
+                <h2>Power Split Algorithm for Individual Time Trials in Road Cycling</h2>
                 <p className="subtitle">
                     <em>Internship completed at the end of the third year of engineering school in Applied Mathematics, supervised by Mr.Fondin, Lead Data Scientist at Team Visma Lease a Bike</em>
                 </p>
@@ -84,8 +122,8 @@ function Project() {
                     <div className="skills-chips">
                         <span className="chip">Relational Databases</span>
                         <span className="chip">Python Programming</span>
-                        <span className="chip">R</span>
-                        <span className="chip">SQL</span>
+                        <span className="chip">R Programming</span>
+                        <span className="chip">SQL Programming</span>
                     </div>
 
                     <button 
@@ -103,16 +141,15 @@ function Project() {
                                 <li>Automating video compilations using SQL queries</li>
                                 <li>Generating automated data tables for a given match</li>
                             </ul>
-                            {/* <p className='video_legend'>Compilation of Wang Chuqin’s short returns against Felix Lebrun during the WTT Finals Men Doha 2023 :</p>
+                            <p className='video_legend'>Compilation of Wang Chuqin’s short returns against Felix Lebrun during the WTT Finals Men Doha 2023 :</p>
                             <video className="video-responsive" autoPlay loop muted>
                                 <source src={mock_tt_video} type="video/mp4" />
                                 Your browser does not support the video tag.
-                            </video> */}
+                            </video>
                             <p>The main challenge I overcame was understanding a sport that was completely new to me</p>
                         </>
                 )}
             </div>
-
         </div>
     </div>
     <div className="projects-container" id="sports-projects">
@@ -126,14 +163,14 @@ function Project() {
                 <h2>Rider Potential Prediction in Road Cycling</h2>
                 <p className="subtitle">
                     <em>
-                        Ongoing project from the third year of the Bachelor's in Data Science. 
+                        Project completed from the third year of the Bachelor's in Data Science. 
                         Supervised by Mr.Fondin, Lead Data Scientist at Team Visma Lease a Bike
                     </em>
                 </p>
                 <p>
-                    I am creating Machine Learning models to predict a rider's potential over four years based on a physiological test in road cycling. 
-                    I use variables such as FatMax Power, Max Lactate Steady State (MLSS), VO2max, VO2ss, and VLamax from physiological tests 
-                    to predict performance indicators that I create from race results.
+                    I created machine learning models to predict a rider's potential over four years based on a physiological test in road cycling. 
+                    I used variables such as FatMax Power, Max Lactate Steady State (MLSS), VO2max, VO2ss, and VLamax from physiological tests 
+                    to predict performance indicators that I created from race results.
                 </p>
                 <div className="skills-chips">
                     <span className="chip">Machine Learning</span>
@@ -152,7 +189,7 @@ function Project() {
 
                 {showMoreStates.potential && (
                     <>
-                        <p>The goal of this project is to create relevant performance indicators so that a coach can understand, based on a physiological test performed by a rider, what results the rider can be expected to achieve in different types of races. To do this, I use physiological test results from a sample of riders as input, along with other rider-specific variables. I then predict the values of the various indicators over four seasons</p>
+                        <p>The goal of this project was to create relevant performance indicators so that a coach can understand, based on a physiological test performed by a rider, what results the rider can be expected to achieve in different types of races. To do this, I use physiological test results from a sample of riders as input, along with other rider-specific variables. I then predict the values of the various indicators over four seasons</p>
                         <p>Main tasks include:</p>
                         <ul>
                             <li>Scraping all races and rankings related to our sample of riders</li>
@@ -170,10 +207,10 @@ function Project() {
                 <img src={mock_football} className="project-image zoom" alt="thumbnail" />
                 <h2>Event Prediction Using StatsBomb Data</h2>
                 <p className="subtitle">
-                    <em>Ongoing project from the third year of the Bachelor's in Data Science</em>
+                    <em>Class project completed during the third year of the Bachelor's in Data Science</em>
                 </p>
                 <p>
-                    I use StatsBomb Open Data to implement classification methods such as K-Nearest Neighbors (KNN), Linear Discriminant Analysis (LDA), and Decision Trees to predict whether a shot will be on target, whether a pass will lead to a shot shortly afterward, or whether a corner will result in a shot
+                    I used <i>StatsBomb</i> Open Data to implement classification methods such as K-Nearest Neighbors (KNN), Linear Discriminant Analysis (LDA), and Decision Trees to predict whether a shot will be on target
                 </p>
                 <div className="skills-chips">
                     <span className="chip">K-Nearest Neighbors (KNN)</span>
