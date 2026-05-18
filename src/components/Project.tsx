@@ -15,11 +15,12 @@ import mock_kif from '../assets/images/mock_kif.jpg';
 
 import age_distrib from "../assets/images/age_distribution.png";
 import turns_detect from "../assets/images/turns_detection.png";
+import on_off from "../assets/images/on_off_target.png";
 import '../assets/styles/Project.scss';
 
 
 function Project() {
-    type ShowMoreKey = 'koldingif' | 'tableTennis' | 'powerSplit'| 'dataWarehouse'| 'usAirTraffic' | 'nbaSalaries' | 'cyclocrossElo' | 'tennisPrediction' | 'potential' | 'powerbi';
+    type ShowMoreKey = 'koldingif' | 'tableTennis' | 'powerSplit'| 'shot' |'dataWarehouse'| 'usAirTraffic' | 'nbaSalaries' | 'cyclocrossElo' | 'tennisPrediction' | 'potential' | 'powerbi';
 
     const [showMoreStates, setShowMoreStates] = useState({
         koldingif:false,
@@ -31,7 +32,8 @@ function Project() {
         cyclocrossElo: false,
         tennisPrediction: false,
         potential: false,
-        powerbi:false
+        powerbi:false,
+        shot:false
     });
 
     const toggleShowMore = (key: ShowMoreKey) => {
@@ -176,12 +178,12 @@ function Project() {
                                 <li>Automating video compilations using SQL queries</li>
                                 <li>Generating automated data tables for a given match</li>
                             </ul>
-                            <p className='video_legend'>Compilation of Wang Chuqin’s short returns against Felix Lebrun during the WTT Finals Men Doha 2023 :</p>
+                            <p>The main challenge I overcame was understanding a sport that was completely new to me</p>
                             <video className="video-responsive" autoPlay loop muted>
                                 <source src={mock_tt_video} type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
-                            <p>The main challenge I overcame was understanding a sport that was completely new to me</p>
+                            <p className='video_legend'>Compilation of Wang Chuqin’s short returns against Felix Lebrun during the WTT Finals Men Doha 2023</p>
                         </>
                 )}
             </div>
@@ -253,6 +255,29 @@ function Project() {
                     <span className="chip">Decision Trees</span>
                     <span className="chip">R Programming</span>
                 </div>
+                <button 
+                    className="see-more-btn" 
+                    onClick={() => toggleShowMore("shot")}>
+                    {showMoreStates.shot ? 'See less' : 'See more'}
+                </button>
+
+                {showMoreStates.shot && (
+                <>
+                    <img
+                    src={on_off}
+                    alt="on_off"
+                    style={{
+                        display: "block",
+                        margin: "20px auto",
+                        width: "90%",
+                        maxWidth: "300px",
+                        height: "auto",
+                        borderRadius: "8px"
+                    }}
+                    />
+                    <p className="video_legend">Model prediction of shot outcomes</p>
+                </>
+                )}
             </div>
 
             {/* Projet NBA Salaries */}
