@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState,useEffect} from "react";
 import mock_leb from '../assets/images/mock_leb.jpg';
 import mock_tt from '../assets/images/mock_tt.jpg';
 import mock_basket from '../assets/images/mock_basket.jpg';
@@ -35,17 +35,48 @@ function Project() {
         powerbi:false,
         shot:false
     });
+    type FilterKey =
+    | "all"
+    | "cycling"
+    | "football"
+    | "tt"
+    | "basket"  
+    | "tennis"
+    ;
+    const [filter, setFilter] = useState<FilterKey>("all");
+    useEffect(() => {
+        const projects = document.querySelectorAll(".project");
+
+        projects.forEach((project) => {
+            const key = project.getAttribute("data-key");
+
+            if (filter === "all") {
+                (project as HTMLElement).style.display = "block";
+            } else {
+                (project as HTMLElement).style.display =
+                    key === filter ? "block" : "none";
+            }
+        });
+    }, [filter]);
 
     const toggleShowMore = (key: ShowMoreKey) => {
         setShowMoreStates(prev => ({ ...prev, [key]: !prev[key] }));
     };
     return(
     <>
+    <div className="filters">
+        <button onClick={() => setFilter("all")}>All</button>
+        <button onClick={() => setFilter("cycling")}>Cycling</button>
+        <button onClick={() => setFilter("football")}>Football</button>
+        <button onClick={() => setFilter("tt")}>Table Tennis</button>
+        <button onClick={() => setFilter("basket")}>Basketball</button>
+        <button onClick={() => setFilter("tennis")}>Tennis</button>
+    </div>
     <div className="projects-container" id="internships">
         <h1>Internships</h1>
         <div className="projects-grid">
             {/* Kolding IF */}
-            <div className="project">
+            <div className="project" data-key="football">
                 <img src={mock_kif} className="project-image zoom" alt="thumbnail" />
                     <h2>Forecasting player potential development using advanced football data</h2>
                     <p className="subtitle">
@@ -99,7 +130,7 @@ function Project() {
             </div>
 
             {/* Projet Power Split */}
-            <div className="project">
+            <div className="project"  data-key="cycling">
                 <img src={mock_tt} className="project-image zoom" alt="thumbnail" />
                 <h2>Power Split Algorithm for Individual Time Trials in Road Cycling</h2>
                 <p className="subtitle">
@@ -149,7 +180,7 @@ function Project() {
             </div>
 
             {/* Projet Table Tennis */}
-            <div className="project">
+            <div className="project"  data-key="tt">
                 <img src={mock_leb} className="project-image zoom" alt="thumbnail" />
                     <h2>French National Team Table Tennis Analysis</h2>
                     <p className="subtitle">
@@ -191,10 +222,10 @@ function Project() {
     </div>
     <div className="projects-container" id="sports-projects">
         <h1>Sports projects</h1>
-        <div className="projects-grid">
+        <div className="projects-grid"  data-key="cycling">
             
             {/* Projet Potentiel cyclisme */}
-            <div className="project">
+            <div className="project" data-key="cycling">
                 <img src={mock_potential} className="project-image zoom" alt="thumbnail" />
                 {/* <img src={mock_cyclisme} className="zoom" alt="thumbnail" width="100%" /> */}
                 <h2>Rider Potential Prediction in Road Cycling</h2>
@@ -240,7 +271,7 @@ function Project() {
             </div>
 
             {/* Projet Classification foot */}
-            <div className="project">
+            <div className="project"  data-key="football">
                 <img src={mock_football} className="project-image zoom" alt="thumbnail" />
                 <h2>Event Prediction Using StatsBomb Data</h2>
                 <p className="subtitle">
@@ -281,7 +312,7 @@ function Project() {
             </div>
 
             {/* Projet NBA Salaries */}
-            <div className="project">
+            <div className="project" data-key="basket">
                 <img src={mock_basket} className="project-image zoom" alt="thumbnail" />
                 <h2>NBA Player Salary Prediction</h2>
                 <p className="subtitle">
@@ -301,7 +332,7 @@ function Project() {
             </div>
 
             {/* Projet Cyclocross ELO */}
-            <div className="project">
+            <div className="project" data-key="cycling">
                 <img src={mock_cc} className="project-image zoom" alt="thumbnail" />
                 <h2>Cyclocross ELO Ranking</h2>
                 <p className="subtitle">
@@ -319,7 +350,7 @@ function Project() {
             </div>
 
             {/* Projet Tennis Prediction */}
-            <div className="project">
+            <div className="project" data-key="tennis">
                 <img src={mock_tennis} className="project-image zoom" alt="thumbnail" />
                 <h2>Tennis Match Outcome Prediction</h2>
                 <p className="subtitle">
