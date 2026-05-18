@@ -12,12 +12,17 @@ import mock_tt_video from '../assets/images/tt_video.mp4';
 import mock_dash from '../assets/images/mock_dash.png';
 import mock_pcm from '../assets/images/mock_pcm.jpg';
 import mock_kif from '../assets/images/mock_kif.jpg';
+
+import age_distrib from "../assets/images/age_distribution.png";
+import turns_detect from "../assets/images/turns_detection.png";
 import '../assets/styles/Project.scss';
 
+
 function Project() {
-    type ShowMoreKey = 'tableTennis' | 'powerSplit'| 'dataWarehouse'| 'usAirTraffic' | 'nbaSalaries' | 'cyclocrossElo' | 'tennisPrediction' | 'potential' | 'powerbi';
+    type ShowMoreKey = 'koldingif' | 'tableTennis' | 'powerSplit'| 'dataWarehouse'| 'usAirTraffic' | 'nbaSalaries' | 'cyclocrossElo' | 'tennisPrediction' | 'potential' | 'powerbi';
 
     const [showMoreStates, setShowMoreStates] = useState({
+        koldingif:false,
         tableTennis: false,
         powerSplit: false,
         dataWarehouse: false,
@@ -57,21 +62,38 @@ function Project() {
 
                     <button 
                         className="see-more-btn" 
-                        onClick={() => toggleShowMore("tableTennis")}
+                        onClick={() => toggleShowMore("koldingif")}
                     >
-                        {showMoreStates.tableTennis ? 'See less' : 'See more'}
+                        {showMoreStates.koldingif ? 'See less' : 'See more'}
                     </button>
 
-                    {showMoreStates.tableTennis && (
-                        <>
-                            <p>Main tasks included:</p>
-                            <ul>
-                                <li>Collect data using APIs</li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                        </>
-                )}
+                    {showMoreStates.koldingif && (
+                    <>
+                        <p>
+                        The goal of this project was to support the team’s recruitment process by creating new tools to gather more information on player development. Using data from IMPECT and Wyscout, we aimed to predict a player’s performance in the next season. We also modeled changes in player performance when they transfer from one league to another. To do this, we used contextual data across multiple leagues worldwide on team and league style, as well as team and league quality.
+                        </p>
+
+                        <p>Main Tasks included:</p>
+                        <ul>
+                            <li>Collect data using APIs and combine different data sources</li>
+                            <li>Create linear regression and XGBoost models for prediction</li>
+                            <li>Create new performance features</li>
+                        </ul>
+
+                        <img
+                        src={age_distrib}
+                        alt="age_distribution"
+                        style={{
+                            display: "block",
+                            margin: "20px auto",
+                            width: "90%",
+                            maxWidth: "400px",
+                            height: "auto",
+                            borderRadius: "8px"
+                        }}
+                        />
+                    </>
+                    )}
             </div>
 
             {/* Projet Power Split */}
@@ -103,6 +125,19 @@ function Project() {
                         <ul>
                             <li>Using a differential evolution algorithm to implement a power split</li>
                             <li>Detecting turns from a .GPX file to model their impact on a time trial</li>
+                            <img
+                            src={turns_detect}
+                            alt="turns_detect"
+                            style={{
+                                display: "block",
+                                margin: "20px auto",
+                                width: "90%",
+                                maxWidth: "300px",
+                                height: "auto",
+                                borderRadius: "8px"
+                            }}
+                            />
+                            <p className='video_legend'>Turns detected by the model along the route of Stage 5 of the 2025 Tour de France</p>
                             <li>Integrating turn impact into the optimization algorithm for power splits</li>
                             <li>Incorporating the impact of weather and aerodynamics</li>
                             <li>Researching and quantifying as many of the external performance factors as possible</li>
@@ -297,7 +332,7 @@ function Project() {
 
         {/* Projet PowerBI */}
         <div className="project">
-        <img src={mock_dash} className="project-image_p zoom" alt="thumbnail" />         
+        <img src={mock_dash} className="project-image_p zoom" alt="thumbnail"/>        
           <h2>Creating PowerBI Dashboards</h2>
           <p className="subtitle">
             <em>Project completed in 2nd year of the Bachelor's in Data Science</em>
