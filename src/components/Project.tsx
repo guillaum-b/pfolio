@@ -14,6 +14,7 @@ import mock_pcm from '../assets/images/mock_pcm.jpg';
 import mock_kif from '../assets/images/mock_kif.jpg';
 
 import age_distrib from "../assets/images/age_distribution.png";
+import split from "../assets/images/split.jpg";
 import turns_detect from "../assets/images/turns_detection.png";
 import on_off from "../assets/images/on_off_target.png";
 import '../assets/styles/Project.scss';
@@ -157,6 +158,19 @@ function Project() {
                         <p>Main tasks included:</p>
                         <ul>
                             <li>Using a differential evolution algorithm to implement a power split</li>
+                            <img
+                            src={split}
+                            alt="split"
+                            style={{
+                                display: "block",
+                                margin: "20px auto",
+                                width: "90%",
+                                maxWidth: "300px",
+                                height: "auto",
+                                borderRadius: "8px"
+                            }}
+                            />
+                            <p className='video_legend'>Segment-by-segment speed modeling for a cyclist based on power split</p>
                             <li>Detecting turns from a .GPX file to model their impact on a time trial</li>
                             <img
                             src={turns_detect}
