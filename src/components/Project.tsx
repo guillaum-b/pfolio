@@ -12,11 +12,13 @@ import mock_tt_video from '../assets/images/tt_video.mp4';
 import mock_dash from '../assets/images/mock_dash.png';
 import mock_pcm from '../assets/images/mock_pcm.jpg';
 import mock_kif from '../assets/images/mock_kif.jpg';
+import mock_break from '../assets/images/mock_break.jpg';
 
-import age_distrib from "../assets/images/age_distribution.png";
 import split from "../assets/images/split.jpg";
 import turns_detect from "../assets/images/turns_detection.png";
 import on_off from "../assets/images/on_off_target.png";
+import ex_visu from "../assets/images/ex_visu.png";
+import visu_tennis from "../assets/images/visu_tennis.png";
 import '../assets/styles/Project.scss';
 
 
@@ -113,19 +115,6 @@ function Project() {
                             <li>Create linear regression and XGBoost models for prediction</li>
                             <li>Create new performance features</li>
                         </ul>
-
-                        <img
-                        src={age_distrib}
-                        alt="age_distribution"
-                        style={{
-                            display: "block",
-                            margin: "20px auto",
-                            width: "90%",
-                            maxWidth: "400px",
-                            height: "auto",
-                            borderRadius: "8px"
-                        }}
-                        />
                     </>
                     )}
             </div>
@@ -133,7 +122,7 @@ function Project() {
             {/* Projet Power Split */}
             <div className="project"  data-key="cycling">
                 <img src={mock_tt} className="project-image zoom" alt="thumbnail" />
-                <h2>Power Split Algorithm for Individual Time Trials in Road Cycling</h2>
+                <h2>Power split algorithm for individual time trials in road cycling</h2>
                 <p className="subtitle">
                     <em>Internship completed at the end of the third year of engineering school in Applied Mathematics, supervised by Mr.Fondin, Lead Data Scientist at Team Visma Lease a Bike</em>
                 </p>
@@ -196,7 +185,7 @@ function Project() {
             {/* Projet Table Tennis */}
             <div className="project"  data-key="tt">
                 <img src={mock_leb} className="project-image zoom" alt="thumbnail" />
-                    <h2>French National Team Table Tennis Analysis</h2>
+                    <h2>French national team table tennis analysis</h2>
                     <p className="subtitle">
                         <em>Internship completed at the end of the second year of the Bachelor's in Data Science, at the LIRIS research laboratory in Lyon, France</em>
                     </p>
@@ -242,7 +231,7 @@ function Project() {
             <div className="project" data-key="cycling">
                 <img src={mock_potential} className="project-image zoom" alt="thumbnail" />
                 {/* <img src={mock_cyclisme} className="zoom" alt="thumbnail" width="100%" /> */}
-                <h2>Rider Potential Prediction in Road Cycling</h2>
+                <h2>Rider potential prediction in road cycling</h2>
                 <p className="subtitle">
                     <em>
                         Project completed from the third year of the Bachelor's in Data Science. 
@@ -272,6 +261,19 @@ function Project() {
                 {showMoreStates.potential && (
                     <>
                         <p>The goal of this project was to create relevant performance indicators so that a coach can understand, based on a physiological test performed by a rider, what results the rider can be expected to achieve in different types of races. To do this, I use physiological test results from a sample of riders as input, along with other rider-specific variables. I then predict the values of the various indicators over four seasons</p>
+                        <img
+                        src={ex_visu}
+                        alt="ex_visu"
+                        style={{
+                            display: "block",
+                            margin: "20px auto",
+                            width: "90%",
+                            maxWidth: "300px",
+                            height: "auto",
+                            borderRadius: "8px"
+                        }}
+                        />
+                    <p className="video_legend">Example of predictions for a rider following a pre-season test</p>
                         <p>Main tasks include:</p>
                         <ul>
                             <li>Scraping all races and rankings related to our sample of riders</li>
@@ -283,11 +285,28 @@ function Project() {
                     </>
                 )}
             </div>
+            
+            {/* Projet breakway cycling */}
+            <div className="project" data-key="cycling">
+                <img src={mock_break} className="project-image zoom" alt="thumbnail" />
+                <h2>Modeling and calculating the probability of a breakaway winning</h2>
+                <p className="subtitle">
+                    <em>Ongoing personal project</em>
+                </p>
+                <p>
+                    Based on the results and characteristics of the races, I try to model and calculate the probability of a breakaway winning
+                </p>
+                <div className="skills-chips">
+                    <span className="chip">Python programming</span>
+                    <span className="chip">Machine learning</span>
+                    <span className="chip">Probabilities</span>
+                </div>
+            </div>
 
             {/* Projet Classification foot */}
             <div className="project"  data-key="football">
                 <img src={mock_football} className="project-image zoom" alt="thumbnail" />
-                <h2>Event Prediction Using StatsBomb Data</h2>
+                <h2>Event prediction using StatsBomb data</h2>
                 <p className="subtitle">
                     <em>Class project completed during the third year of the Bachelor's in Data Science</em>
                 </p>
@@ -299,6 +318,7 @@ function Project() {
                     <span className="chip">Linear Discriminant Analysis (LDA)</span>
                     <span className="chip">Decision Trees</span>
                     <span className="chip">R Programming</span>
+                    <span className="chip">StatsBomb</span>
                 </div>
                 <button 
                     className="see-more-btn" 
@@ -328,7 +348,7 @@ function Project() {
             {/* Projet NBA Salaries */}
             <div className="project" data-key="basket">
                 <img src={mock_basket} className="project-image zoom" alt="thumbnail" />
-                <h2>NBA Player Salary Prediction</h2>
+                <h2>NBA player salary prediction</h2>
                 <p className="subtitle">
                     <em>Project completed in 2nd year of the Bachelor's in Data Science</em>
                 </p>
@@ -348,7 +368,7 @@ function Project() {
             {/* Projet Cyclocross ELO */}
             <div className="project" data-key="cycling">
                 <img src={mock_cc} className="project-image zoom" alt="thumbnail" />
-                <h2>Cyclocross ELO Ranking</h2>
+                <h2>Cyclocross ELO ranking</h2>
                 <p className="subtitle">
                     <em>Personal Project</em>
                 </p>
@@ -365,8 +385,8 @@ function Project() {
 
             {/* Projet Tennis Prediction */}
             <div className="project" data-key="tennis">
-                <img src={mock_tennis} className="project-image zoom" alt="thumbnail" />
-                <h2>Tennis Match Outcome Prediction</h2>
+                <img src={mock_tennis} className="project-image zoom" alt="thumbnail"/>
+                <h2>Tennis match outcome prediction</h2>
                 <p className="subtitle">
                     <em>Personal Project</em>
                 </p>
@@ -379,6 +399,29 @@ function Project() {
                     <span className="chip">Web Scraping (Python)</span>
                     <span className="chip">Python Programming</span>
                 </div>
+                <button 
+                className="see-more-btn" 
+                onClick={() => toggleShowMore("tennisPrediction")}
+                >
+                {showMoreStates.tennisPrediction ? 'See less' : 'See more'}
+                </button>
+                {showMoreStates.tennisPrediction && (
+                <>
+                    <img
+                    src={visu_tennis}
+                    alt="visu_tennis"
+                    style={{
+                        display: "block",
+                        margin: "20px auto",
+                        width: "90%",
+                        maxWidth: "300px",
+                        height: "auto",
+                        borderRadius: "8px"
+                    }}
+                />
+                <p className="video_legend">Model prediction of shot outcomes</p>
+                </>
+                )}
             </div>
         </div>
     </div>
@@ -389,7 +432,7 @@ function Project() {
         {/* Projet US Air Traffic */}
         <div className="project">
         <img src={mock_plane} className="project-image zoom" alt="thumbnail" />         
-          <h2>US Domestic Air Traffic Forecasting</h2>
+          <h2>US domestic air traffic forecasting</h2>
           <p className="subtitle">
             <em>Project completed in 2nd year of the Bachelor's in Data Science</em>
           </p>
@@ -403,7 +446,7 @@ function Project() {
         {/* Projet PowerBI */}
         <div className="project">
         <img src={mock_dash} className="project-image_p zoom" alt="thumbnail"/>        
-          <h2>Creating PowerBI Dashboards</h2>
+          <h2>Creating PowerBI dashboards</h2>
           <p className="subtitle">
             <em>Project completed in 2nd year of the Bachelor's in Data Science</em>
           </p>
@@ -436,7 +479,7 @@ function Project() {
         {/* Pro Cycling Manager */}
         <div className="project">
             <img src={mock_pcm} className="project-image zoom" alt="thumbnail" />
-            <h2>Creation of a Realistic Fictional Database for the ProCyclingManager Video Game</h2>
+            <h2>Creation of a realistic fictional database for the ProCyclingManager video game</h2>
             <p className="subtitle">
                 <em>Personal Project</em>
             </p>
@@ -453,7 +496,7 @@ function Project() {
         {/* Projet Data Warehouse */}
         <div className="project">
             <img src={mock_pets} className="project-image zoom" alt="thumbnail" />         
-          <h2>Data Integration into a Data Warehouse</h2>
+          <h2>Data integration into a data warehouse</h2>
           <p className="subtitle">
             <em>Project completed in 2nd year of the Bachelor's in Data Science</em>
           </p>
