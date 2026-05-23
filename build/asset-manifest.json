@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/pfolio/static/css/main.385c85ab.css",
+    "main.js": "/pfolio/static/js/main.847308cf.js",
+    "static/js/453.b05d8aa5.chunk.js": "/pfolio/static/js/453.b05d8aa5.chunk.js",
+    "static/media/tt_video.mp4": "/pfolio/static/media/tt_video.678ec51c1f5112eb1973.mp4",
+    "static/media/mock_foot.jpg": "/pfolio/static/media/mock_foot.e95672b6653c5cf248c7.jpg",
+    "static/media/mock_potential.jpg": "/pfolio/static/media/mock_potential.d93a7f86eef257127f98.jpg",
+    "static/media/mock_plane.jpg": "/pfolio/static/media/mock_plane.a392281df879fc01c5d6.jpg",
+    "static/media/mock_tennis.jpg": "/pfolio/static/media/mock_tennis.9e16e09491d7064fb7e5.jpg",
+    "static/media/mock_break.jpg": "/pfolio/static/media/mock_break.d345e77c6e60de4a4cf3.jpg",
+    "static/media/mock_pcm.jpg": "/pfolio/static/media/mock_pcm.b007a26e864d71afe51e.jpg",
+    "static/media/mock_pets.jpg": "/pfolio/static/media/mock_pets.10ae7547a73b594fb147.jpg",
+    "static/media/mock_tt.jpg": "/pfolio/static/media/mock_tt.3c36bb54edceeadd00d7.jpg",
+    "static/media/turns_detection.png": "/pfolio/static/media/turns_detection.1eadc1d781842ba4eb3c.png",
+    "static/media/bg-light.png": "/pfolio/static/media/bg-light.bac0efb485244a522981.png",
+    "static/media/bg-dark.png": "/pfolio/static/media/bg-dark.f420c6b8458af72de935.png",
+    "static/media/mock_basket.jpg": "/pfolio/static/media/mock_basket.422243d647fbd5936a7f.jpg",
+    "static/media/mock_leb.jpg": "/pfolio/static/media/mock_leb.e402f9453e58c5a769a8.jpg",
+    "static/media/ex_visu.png": "/pfolio/static/media/ex_visu.ea8907134f86d47cd901.png",
+    "static/media/mock_dash.png": "/pfolio/static/media/mock_dash.48825f525cc42647c241.png",
+    "static/media/visu_tennis.png": "/pfolio/static/media/visu_tennis.93c5aee45f5ee030a57e.png",
+    "static/media/split.jpg": "/pfolio/static/media/split.e1ed61237131e1aa1398.jpg",
+    "static/media/mock_cc.png": "/pfolio/static/media/mock_cc.fd089311297a80110acf.png",
+    "static/media/mock_kif.jpg": "/pfolio/static/media/mock_kif.00a53c889727ec365a76.jpg",
+    "static/media/on_off_target.png": "/pfolio/static/media/on_off_target.81356d6866e617442343.png",
+    "index.html": "/pfolio/index.html",
+    "main.385c85ab.css.map": "/pfolio/static/css/main.385c85ab.css.map",
+    "main.847308cf.js.map": "/pfolio/static/js/main.847308cf.js.map",
+    "453.b05d8aa5.chunk.js.map": "/pfolio/static/js/453.b05d8aa5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.385c85ab.css",
+    "static/js/main.847308cf.js"
+  ]
+}
